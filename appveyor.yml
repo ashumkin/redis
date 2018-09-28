@@ -9,5 +9,11 @@ branches:
 install:
     - git submodule -q update --init
 
+platform: x86
+configuration: Debug
+
 build:
     project: msvs\RedisServer.sln
+
+artifacts:
+    - path: msvs\Win32\$(configuration)\*.exe
